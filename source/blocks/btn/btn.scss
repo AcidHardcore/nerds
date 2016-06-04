@@ -1,0 +1,37 @@
+@import "../../mixins/mixins";
+
+.btn {
+  @include btn();
+  @include btn-color($text-color, $gray-lighter, $gray-light);
+  @include btn-size();
+
+  &--main {
+    @include btn-color(#fff, $color-main, $color-main);
+  }
+
+  &--danger {
+    @include btn-color(#fff, $color-danger, $color-danger);
+  }
+
+  &--success {
+    @include btn-color(#fff, $color-success, $color-success);
+  }
+
+  &--lg {
+    @include btn-size(lg);
+  }
+
+  &--sm {
+    @include btn-size(sm);
+  }
+
+  &--block {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+
+    & + & {
+      margin-top: ($line-height / 2);
+    }
+  }
+}
