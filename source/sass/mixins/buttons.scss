@@ -45,7 +45,7 @@
     cursor: not-allowed;
     opacity: $opacity;
 
-    a& {
+    & a {
       pointer-events: none;
     }
   }
@@ -99,8 +99,8 @@
 
   @if ($size = sm) {
     font-size: $font-size--small;
-    padding-top: round(($field-padding-top / 2), 2);
-    padding-bottom: round(($field-padding-bottom / 2), 2);
+    padding-top: round($field-padding-top / 2);
+    padding-bottom: round($field-padding-bottom / 2);
   }
 
   @if ($size = lg) {

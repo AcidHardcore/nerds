@@ -118,10 +118,10 @@
 //
 //  Возвращает переменную $width в контекст вызова.
 //------------------------------------------------------------------------------
-$width: auto; //for comfort
+//$width: auto; //for comfort
 
 @function get-width($column: 1, $columns: $grid-columns) {
-  @return ($width: (100% / $columns) * $column)
+  @return ((100% / $columns) * $column)
 }
 
 
@@ -136,11 +136,11 @@ $width: auto; //for comfort
 //------------------------------------------------------------------------------
 
 @mixin make-col($column: 1, $columns: $grid-columns, $gutter: $grid-gutter-width) {
-  get-width($column, $columns); // Вернёт $width с шириной в процентах
+  width: get-width($column, $columns); // Вернёт $width с шириной в процентах
 
   display: block;
-  flex: 0 0 $width;
-  max-width: $width;
+  flex: 0 0 get-width($column, $columns);
+  max-width: get-width($column, $columns);
 
   // ВНИМАНИЕ! если $gutter = false, в CSS не попадут правила padding-left и padding-right
   @if not ($gutter = false) {

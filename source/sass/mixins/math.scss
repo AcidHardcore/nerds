@@ -1,0 +1,11 @@
+//$size - variable in px
+//$htmlFontSize - font size of html element
+@function pxToRem($sizePx, $htmlFontSize: 10) {
+  $remSize: $sizePx / $htmlFontSize;
+  @return #{$remSize}rem;
+}
+
+@function remToPx($sizeRem, $htmlFontSize: 10) {
+  $pxSize: $sizeRem * $htmlFontSize;
+  @return #{$pxSize}px;
+}
