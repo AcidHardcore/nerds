@@ -102,18 +102,20 @@ h6 {
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family--headings;
   font-weight: 700;
-  line-height: 1.5; //1.25
+  //line-height: 1.5;
   color: currentColor;
 }
 
 // .h1, .h2, .h3,
 h1, h2, h3 {
+  line-height: $line-height * 2;
   margin-top: $line-height;
   margin-bottom: ($line-height / 2);
 }
 
 // .h4, .h5, .h6,
 h4, h5, h6 {
+  line-height: $line-height;
   margin-top: ($line-height / 2);
   margin-bottom: ($line-height / 2);
 }
