@@ -65,6 +65,21 @@ gulp.task('css', function () {
         .pipe(debug({title: "css:"}));
 });
 
+//copy additional CSS
+gulp.task ('copy:css', function () {
+    console.log('---------- SASS compile');
+    return gulp.src('./source/css/additional.css', {since: gulp.lastRun('copy:css')})
+        .pipe(autoprefixer({browsers: ['last 2 version']}))
+        .pipe(debug({title: "autoPrefixer:"}))
+        .pipe(gulpIf (!isDev, csscomb()))
+        .pipe(gulpIf (!isDev, debug({title: "cssComb:"})))
+        .pipe(gulpIf(!isDev, cleancss()))
+        .pipe(gulpIf(!isDev, debug({title: "cleenCss:"})))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./build/css/'))
+        .pipe(debug({title: "copy:css"}));
+});
+
 // coping and optimisation images
 gulp.task('img', function () {
     // console.log('---------- Copy and optimisation images');
@@ -142,7 +157,7 @@ gulp.task('svgfallback', function () {
 //Assembly html files
 gulp.task('html', function() {
     console.log('---------- Assembly html files');
-    return gulp.src('./source/*.html', {since: gulp.lastRun('html')})
+    return gulp.src('./source/*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file',
@@ -154,8 +169,9 @@ gulp.task('html', function() {
 
 //tracking for changes
 gulp.task('watch', function () {
-    gulp.watch('./source/less/**/*.less', gulp.series('css'));
-    gulp.watch('./source/*.html', gulp.series('html'));
+    gulp.watch('./source/sass/**/*.scss', gulp.series('css'));
+    gulp.watch('./source/css/*.css', gulp.series('copy:css'));
+    gulp.watch('./source/**/**/*.html', gulp.series('html'));
     gulp.watch('./source/js/*.js', gulp.series('js'));
     gulp.watch('./source/img/*.{jpg,jpeg,gif,png,svg}', gulp.series('img'));
 });
