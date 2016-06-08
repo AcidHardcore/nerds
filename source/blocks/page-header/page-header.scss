@@ -1,8 +1,14 @@
 // Для импорта в диспетчер подключений: @import './src/blocks/page-header/page-header.less';
 
 @import '../../sass/variables';     // только для удобства обращения к переменным
-
+@import "../../sass/mixins/mixins";
 
 .page-header {
+  &__wrapper{
+    @include row();
+  }
+  &__cart{
+    @include col(md, 2);
 
+  }
 }

@@ -1,9 +1,11 @@
 // Для импорта в диспетчер подключений: @import './src/blocks/logo/logo.less';
 
 @import '../../sass/variables';     // только для удобства обращения к переменным
+@import '../../sass/mixins/mixins';     // только для удобства обращения к переменным
 
 
 .logo {
-  display: block;
   white-space: nowrap;
+  @include col(md, 2);
+
 }

@@ -1,9 +1,12 @@
-@import "variables.scss";
-@import "mixins/mixins.scss";
+@import "variables";
+@import "mixins/mixins";
 
-@import "normalize.scss";
-@import "scaffolding.scss";
 
-@import "../blocks/page-header/page-header.scss";
-@import "../blocks/page-footer/page-footer.scss";
-@import "../blocks/btn/btn.scss";
+@import "normalize";
+@import "scaffolding";
+
+@import "../blocks/page-header/page-header";
+@import "../blocks/page-footer/page-footer";
+@import "../blocks/btn/btn";
+@import "../blocks/page-nav/page-nav";
+@import "../blocks/logo/logo";

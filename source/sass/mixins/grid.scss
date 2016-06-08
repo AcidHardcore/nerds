@@ -106,9 +106,6 @@
     }
   }
 }
-
-
-
 //------------------------------------------------------------------------------
 //  function return width of the cell
 //------------------------------------------------------------------------------
@@ -116,15 +113,12 @@
 //  $column:      1                     - ширина (кол-во колонок в этой ячейке)
 //  $columns:     $grid-columns;        - количество ячеек в ряду
 //
-//  Возвращает переменную $width в контекст вызова.
+
 //------------------------------------------------------------------------------
-//$width: auto; //for comfort
 
 @function get-width($column: 1, $columns: $grid-columns) {
-  @return ((100% / $columns) * $column)
+  @return 100% / $columns * $column;
 }
-
-
 
 //------------------------------------------------------------------------------
 //  Генератор правил для одной ячейки
@@ -138,19 +132,17 @@
 @mixin make-col($column: 1, $columns: $grid-columns, $gutter: $grid-gutter-width) {
   width: get-width($column, $columns); // Вернёт $width с шириной в процентах
 
+
   display: block;
   flex: 0 0 get-width($column, $columns);
   max-width: get-width($column, $columns);
 
   // ВНИМАНИЕ! если $gutter = false, в CSS не попадут правила padding-left и padding-right
-  @if not ($gutter = false) {
+  @if ($gutter !=  false)  {
     padding-left: ($gutter / 2);
     padding-right: ($gutter / 2);
   }
 }
-
-
-
 //------------------------------------------------------------------------------
 //  Генератор правил для одной ячейки с возможностью указать @media
 //------------------------------------------------------------------------------
@@ -164,37 +156,35 @@
 //------------------------------------------------------------------------------
 
 @mixin col($screen: xs, $column: 1, $columns: $grid-columns, $gutter: $grid-gutter-width) {
-  @if ($screen = xs) {
+  @if ($screen == xs) {
     @include make-col($column, $columns, $gutter);
   }
-  @if ($screen = sm) {
+  @if ($screen == sm) {
     @media (min-width: $screen-sm) {
       @include make-col($column, $columns, $gutter);
     }
   }
-  @if ($screen = md) {
+  @if ($screen == md) {
     @media (min-width: $screen-md) {
       @include make-col($column, $columns, $gutter);
     }
   }
-  @if ($screen = lg) {
+  @if ($screen == lg) {
     @media (min-width: $screen-lg) {
       @include make-col($column, $columns, $gutter);
     }
   }
-  @if ($screen = xl) {
+  @if ($screen == xl) {
     @media (min-width: $screen-xl) {
       @include make-col($column, $columns, $gutter);
     }
   }
-  @if ($screen = xxl) {
+  @if ($screen == xxl) {
     @media (min-width: $screen-xxl) {
       @include make-col($column, $columns, $gutter);
     }
   }
 }
-
-
 
 //------------------------------------------------------------------------------
 //  Генератор правил для отступа одной ячейки с возможностью указать @media
@@ -206,30 +196,30 @@
 //------------------------------------------------------------------------------
 
 @mixin col-offset($screen: xs, $column: 1, $columns: $grid-columns) {
-  @if ($screen = xs) {
+  @if ($screen == xs) {
     margin-left: ($column * 100% / $columns);
   }
-  @if ($screen = sm) {
+  @if ($screen == sm) {
     @media (min-width: $screen-sm) {
       margin-left: ($column * 100% / $columns);
     }
   }
-  @if ($screen = md) {
+  @if ($screen == md) {
     @media (min-width: $screen-md) {
       margin-left: ($column * 100% / $columns);
     }
   }
-  @if ($screen = lg) {
+  @if ($screen == lg) {
     @media (min-width: $screen-lg) {
       margin-left: ($column * 100% / $columns);
     }
   }
-  @if ($screen = xl) {
+  @if ($screen == xl) {
     @media (min-width: $screen-xl) {
       margin-left: ($column * 100% / $columns);
     }
   }
-  @if ($screen = xxl) {
+  @if ($screen == xxl) {
     @media (min-width: $screen-xxl) {
       margin-left: ($column * 100% / $columns);
     }

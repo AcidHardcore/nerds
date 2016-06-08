@@ -170,6 +170,7 @@ gulp.task('html', function() {
 //tracking for changes
 gulp.task('watch', function () {
     gulp.watch('./source/sass/**/*.scss', gulp.series('css'));
+    gulp.watch('./source/blocks/**/**/*.scss', gulp.series('css'));
     gulp.watch('./source/css/*.css', gulp.series('copy:css'));
     gulp.watch('./source/**/**/*.html', gulp.series('html'));
     gulp.watch('./source/js/*.js', gulp.series('js'));
