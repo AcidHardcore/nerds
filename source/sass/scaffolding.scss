@@ -6,11 +6,11 @@
 
 // Make viewport responsive
 // see http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-//@at-root {
-//  @-ms-viewport {
-//    width: device-width;
-//  }
-//}
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
 // see: https://github.com/suitcss/base
@@ -53,7 +53,6 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 62.5%;
-
   //@media screen and (min-width: 960px){
   //  font-size: 78.125%;
   //}
@@ -108,7 +107,8 @@ h1, h2, h3, h4, h5, h6 {
 
 // .h1, .h2, .h3,
 h1, h2, h3 {
-  line-height: $line-height * 2;
+  //line-height: $line-height * 2;
+  line-height: $font-size--h1;
   margin-top: $line-height;
   margin-bottom: ($line-height / 2);
 }
@@ -130,8 +130,10 @@ pre,
 address,
 figure,
 table {
-  margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
+  //margin-top: ($line-height / 2);
+  margin-top: 1.7rem;
+  //margin-bottom: ($line-height / 2);
+  margin-bottom: 2.6rem;
 }
 
 address {

@@ -2,7 +2,23 @@
 @import "../../sass/variables";
 
 .page-nav {
-  @include col(md, 8);
-  &__list{
+  @include col(xl, 5);
+  @include col-offset(xl, 2);
+  &__list {
+    @media (min-width: $screen-xl) {
+      display: flex;
+      //flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__item {
+    @media (min-width: $screen-xl) {
+      margin-right: 44px;
+    line-height: 30px;}
+  }
+  &__link {
+
   }
 }

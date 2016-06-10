@@ -1,14 +1,30 @@
 // Для импорта в диспетчер подключений: @import './src/blocks/page-header/page-header.less';
-
-@import '../../sass/variables';     // только для удобства обращения к переменным
+@import '../../sass/variables';
+// только для удобства обращения к переменным
 @import "../../sass/mixins/mixins";
 
 .page-header {
-  &__wrapper{
-    @include row();
+  background-color: #eeeeee;
+  &__container {
+    @include container();
   }
-  &__cart{
-    @include col(md, 2);
+  &__wrapper {
+    @include row();
+    @media (min-width: $screen-xl) {
 
+      min-height: 136px;
+    }
+    align-items: center;
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  &__cart {
+    @include col(xl, 2);
+    @media (min-width: $screen-xl) {
+      padding-left: 58px;
+    }
   }
 }

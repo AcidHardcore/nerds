@@ -1,10 +1,12 @@
 // Базовые цвета
+$black:                       #000000;
 $gray-darkest:                #1c1c1c;
 $gray-darker:                 #3a3a3a;
 $gray-dark:                   #5f5f5f;
 $gray:                        #808080;
 $gray-light:                  #b1b1b1;
-$gray-lighter:                #eceeef;
+//$gray-lighter:                #eceeef;
+$gray-lighter:                #eeeeee;
 $gray-lightest:               #f7f7f9;
 
 $color-main:                  #0275d8;
@@ -15,11 +17,13 @@ $color-danger:                #d9534f;
 
 // Семантические цвета
 
-$text-color:                  $gray-darkest;
+//$text-color:                  $gray-darkest;
+$text-color:                  $black;
 $text-color--muted:           $gray;
 $body-bg:                     #fff;
 
-$link-color:                  $color-main;
+//$link-color:                  $color-main;
+$link-color:                  $black;
 $link-color--hover:           darken($color-main, 15%);
 
 $border-color:                $gray-light;
@@ -27,8 +31,8 @@ $border-color:                $gray-light;
 
 
 $font-size:                   1.6rem;
-$font-size--h1:               4.8rem;
-$font-size--h2:               3.6rem;
+$font-size--h1:               3.6rem;
+$font-size--h2:               3.0rem;
 $font-size--h3:               2.4rem;
 $font-size--h4:               2.0rem;
 $font-size--h5:               1em;     // 1.6rem
@@ -36,9 +40,10 @@ $font-size--h6:               1em;     // 1.6rem
 $font-size--small:            0.75em;
 $font-size--small-percent:    75%;
 
-$line-height:                 2.4rem;
+$line-height:                 $font-size * 1.375;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-family:                 'Roboto Medium', Arial, sans-serif;
+//$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
 $font-family--serif:          Georgia, 'Times New Roman', Times, serif;
 $font-family--monospace:      Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 $font-family--headings:       $font-family;
@@ -47,8 +52,8 @@ $font-family--headings:       $font-family;
 
 // Модульная сетка
 
-$grid-columns:                12;
-$grid-gutter-width:           2.4rem;
+$grid-columns:                11;
+$grid-gutter-width:           20px;
 
 
 
@@ -64,7 +69,8 @@ $screen-xxl:                  1800px;
 $container-sm:                100%;
 $container-md:                100%;
 $container-lg:                $screen-lg - remToPx($grid-gutter-width);
-$container-xl:                $screen-xl - remToPx($grid-gutter-width);
+$container-xl:                $screen-xl - 300px;
+//$container-xl:                $screen-xl - remToPx($grid-gutter-width);
 $container-xxl:               $screen-xxl - remToPx($grid-gutter-width);
 
 

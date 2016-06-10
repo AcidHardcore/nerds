@@ -7,13 +7,23 @@
     url("/fonts/symbols-nerds.woff2") format("woff2");
 }
 
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: "Roboto Medium";
+    src: url("/fonts/robotomedium.woff") format("woff"),
+    url("/fonts/robotomedium.woff2") format("woff2");
+}
+
+
 [class^="icon-"]::before,
 [class*=" icon-"]::before {
     display: inline-block;
     width: 1em;
     margin-right: 0.2em;
     margin-left: 0.2em;
-
+    color: #a6a6a6;
     font-weight: normal;
     line-height: 1em;
     font-family: "symbols-nerds";
@@ -25,7 +35,10 @@
 
     speak: none;
 }
-
+.icon-basket{
+    /*display: inline-block;*/
+    /*padding-right: 10px;*/
+}
 .icon-basket::before { content: "\62"; } /* "b" */
 .icon-facebook::before { content: "\66"; } /* "f" */
 .icon-twitter::before { content: "\74"; } /* "t" */

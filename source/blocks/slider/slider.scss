@@ -1,0 +1,22 @@
+.slider {
+  background-color: $gray-lighter;
+  &__container{
+    @include container();
+  }
+  &__wrapper{
+    @include row();
+  }
+  &__left{
+    @include col(xl,5)
+  }
+  &__desc{
+    width: 370px;
+  }
+  &__paginator{
+    @include col(xl,1)
+  }
+  &__right{
+    @include col(xl,5)
+
+  }
+}

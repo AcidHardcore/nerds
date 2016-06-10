@@ -58,48 +58,48 @@
   }
 
   // Если первая переданная переменная не ноль — выводим margin-ы по умолчанию
-  @if not ($xs-grid-gutter = 0) {
+  @if ($xs-grid-gutter != 0) {
     margin-left:  ($xs-grid-gutter / -2);
     margin-right: ($xs-grid-gutter / -2);
   }
 
   // Если первая переданная переменная не ноль — выводим padding-и по умолчанию для прямых потомков
-  @if not ($xs-grid-gutter = 0) {
+  @if ($xs-grid-gutter != 0) {
     & > * {
       padding-left:  ($grid-gutter-width / 2);
       padding-right: ($grid-gutter-width / 2);
     }
   }
 
-  @if not ($sm-grid-gutter = $xs-grid-gutter) {
+  @if ($sm-grid-gutter != $xs-grid-gutter) {
     @media (min-width: $screen-sm) {
       margin-left:  ($sm-grid-gutter / -2);
       margin-right: ($sm-grid-gutter / -2);
     }
   }
 
-  @if not ($md-grid-gutter = $sm-grid-gutter) {
+  @if ($md-grid-gutter != $sm-grid-gutter) {
     @media (min-width: $screen-md) {
       margin-left:  ($md-grid-gutter / -2);
       margin-right: ($md-grid-gutter / -2);
     }
   }
 
-  @if not ($lg-grid-gutter = $md-grid-gutter) {
+  @if ($lg-grid-gutter != $md-grid-gutter) {
     @media (min-width: $screen-lg) {
       margin-left:  ($lg-grid-gutter / -2);
       margin-right: ($lg-grid-gutter / -2);
     }
   }
 
-  @if not ($xl-grid-gutter = $lg-grid-gutter) {
+  @if ($xl-grid-gutter != $lg-grid-gutter) {
     @media (min-width: $screen-xl) {
       margin-left:  ($xl-grid-gutter / -2);
       margin-right: ($xl-grid-gutter / -2);
     }
   }
 
-  @if not ($xxl-grid-gutter = $xl-grid-gutter) {
+  @if ($xxl-grid-gutter != $xl-grid-gutter) {
     @media (min-width: $screen-xxl) {
       margin-left:  ($xxl-grid-gutter / -2);
       margin-right: ($xxl-grid-gutter / -2);
