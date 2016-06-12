@@ -19,13 +19,16 @@
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  font-size: 1em;
-  line-height: $line-height;
+  //font-size: 1em;
+  font-size: 1.2rem;
+  //line-height: $line-height;
+  line-height: 1.5;
   text-decoration: none;
   border: 1px solid;
   box-sizing: border-box;
   border-radius: $border-radius;
   min-height: 2.125em;
+  text-transform: uppercase;
 
   &--hover,
   &:hover {
@@ -60,9 +63,6 @@
   background-color: $background;
   border-color: $border;
 }
-//@function btn-color--mod($color, $background, $border) {
-//  @return (color: $color, background-color: $background, border-color: $border)
-//}
 
 
 //------------------------------------------------------------------------------
@@ -76,7 +76,7 @@
 
   &--hover,
   &:hover {
-    @include btn-color--mod($color, darken($background, 10%), darken($border, 12%));
+    @include btn-color--mod($color, desaturate($background, 20%), darken($border, 12%));
   }
 
   &--active,

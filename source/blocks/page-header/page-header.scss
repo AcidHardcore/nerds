@@ -22,9 +22,37 @@
     text-transform: uppercase;
   }
   &__cart {
-    @include col(xl, 2);
+    @include col(xl, 1.5);
     @media (min-width: $screen-xl) {
-      padding-left: 58px;
+      padding-left: 27px;
+      padding-right: 0;
     }
+  }
+  &__cart a:visited {
+    text-decoration: none;
+    color: $black;
+  }
+  &__cart a:hover  {
+    color: $color-red;
+    text-decoration: none;
+  }
+  &__cart a:hover  i:before  {
+    color: $color-red;
+  }
+  &__cart a:focus {
+    border-bottom: 1px solid $color-red;
+    text-decoration: none;
+  }
+  &__cart a:focus i:before {
+    color: $black;
+  }
+  &__cart a:active {
+    color: $gray;
+    text-decoration: none;
+    border: 0;
+  }
+  &__cart a:active i:before {
+    color: $gray;
+    border: 0;
   }
 }

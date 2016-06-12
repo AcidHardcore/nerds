@@ -2,8 +2,8 @@
 
 .btn {
   @include btn();
-  @include btn-color($text-color, $gray-lighter, $gray-light);
-  @include btn-size();
+  @include btn-color(#ffffff, $color-red, transparent);
+  //@include btn-size();
 
   &--main {
     @include btn-color(#fff, $color-main, $color-main);
@@ -24,7 +24,16 @@
   &--sm {
     @include btn-size(sm);
   }
-
+  &--slider{
+    padding-right: 71px;
+    padding-left: 71px;
+  }
+  &--slider:hover{
+    background-color: #d6494d;
+  }
+  &--slider:active{
+    background-color: #b63538;
+  }
   &--block {
     width: 100%;
     text-align: center;

@@ -3,7 +3,8 @@ $black:                       #000000;
 $gray-darkest:                #1c1c1c;
 $gray-darker:                 #3a3a3a;
 $gray-dark:                   #5f5f5f;
-$gray:                        #808080;
+//$gray:                        #808080;
+$gray:                        #bebebe;
 $gray-light:                  #b1b1b1;
 //$gray-lighter:                #eceeef;
 $gray-lighter:                #eeeeee;
@@ -12,6 +13,11 @@ $gray-lightest:               #f7f7f9;
 $color-main:                  #0275d8;
 $color-success:               #5cb85c;
 $color-danger:                #d9534f;
+
+
+$color-red:                   #fb565a;
+$color-green:                 #00ca74;
+$color-yellow:                #efc84a;
 
 
 
@@ -83,9 +89,12 @@ $z-index-dropdown:            10;
 
 // Формы, кнопки
 
-$field-padding-top:           0.313em;
-$field-padding-bottom:        0.313em;
-$field-padding-horizontal:    0.438em;
+//$field-padding-top:           0.313em;
+//$field-padding-bottom:        0.313em;
+$field-padding-top:             1rem;
+$field-padding-bottom:          1rem;
+//$field-padding-horizontal:    0.438em;
+$field-padding-horizontal:    $line-height;
 
 
 
