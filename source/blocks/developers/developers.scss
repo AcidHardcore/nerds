@@ -39,7 +39,6 @@
 
     }
   }
-
   &__item-3 {
     width: 209px;
     height: 90px;
@@ -48,20 +47,21 @@
       background: #ffffff url("/img/barbershop@2x.png") no-repeat;
     }
   }
-
   &__item-1:hover,
   &__item-1:active {
     background: #ffffff url("/img/glukhanko-black.png") no-repeat;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: #ffffff url("/img/glukhanko@2x-black.png") no-repeat;
     }
-  }&__item-2:hover,
+  }
+  &__item-2:hover,
   &__item-2:active {
     background: #ffffff url("/img/html-academy-black.png") no-repeat;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: #ffffff url("/img/html-academy-black@2x.png") no-repeat;
     }
-  }&__item-3:hover,
+  }
+  &__item-3:hover,
   &__item-3:active {
     background: #ffffff url("/img/barbershop-black.png") no-repeat;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
