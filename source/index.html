@@ -14,7 +14,7 @@
         <h1 class="slider__title">Долго, дорого, скрупулезно.</h1>
         <p class="slider__desc">Математически выверенный дизайн
           для&nbsp;вашего сайта или мобильного приложения.</p>
-        <button class="btn btn--slider">Узнать больше</button>
+        <button class="btn btn--slider" type="button">Узнать больше</button>
       </div>
       <div class="slider__paginator">
       </div>
@@ -41,7 +41,97 @@
     </div>
   </div>
 </section>
-
+<section class="services">
+  <div class="services__container">
+    <div class="services__wrapper">
+      <div class="services__item">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/web-cite.jpg, img/web-cite.jpg@3x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/web-cite.jpg, img/web-cite.jpg@2x.jpg 2x">
+          <img class="services__img" src="img/web-cite.jpg" width="240" height="124" alt="web-cite">
+        </picture>
+        <b class="services__title">Веб-сайты</b>
+        <p class="services__desc">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+        <button class="btn btn--web-cite">Заказать</button>
+      </div>
+      <div class="services__item">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/app.jpg, img/app.jpg@3x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/app.jpg, img/app.jpg@2x.jpg 2x">
+          <img class="services__img" src="img/app.jpg" width="240" height="124" alt="app">
+        </picture>
+        <b class="services__title">Приложения</b>
+        <p class="services__desc">Покорите топ-10 приложений в AppStore и Google Play</p>
+        <button class="btn btn--app">Заказать</button>
+      </div>
+      <div class="services__item">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/presentation.jpg, img/presentation.jpg@3x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/presentation.jpg, img/presentation.jpg@2x.jpg 2x">
+          <img class="services__img" src="img/presentation.jpg" width="240" height="124" alt="presentation">
+        </picture>
+        <b class="services__title">Презентации</b>
+        <p class="services__desc">Вы даже не подозреваете, на сколько вы изумительны!</p>
+        <button class="btn btn--presentation">Заказать</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about">
+  <div class="about__container">
+    <div class="about__wrapper">
+      <div class="about__left">
+        <h1 class="about__title">Мы — маленькая, но гордая
+          дизайн-студия из Краснодара. </h1>
+        <p class="about__desc">Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива.
+          Работаем не покладая рук, как роботы.</p>
+        <b class="about__title-list">Выполняем заказы на разработку:</b>
+        <ul class="about__list">
+          <li class="about__list-item">Веб-сайтов любой сложности</li>
+          <li class="about__list-item">Мобильных приложений для iOS и Android</li>
+          <li class="about__list-item">Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+      </div>
+      <div class="about__right">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo.png, img/logo@3x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo.png, img/logo@2x.png 2x">
+          <img class="about__img" src="/img/logo.png" width="187" height="75" alt="logo">
+        </picture>
+        <div class="about__since-wrapper">
+          <span class="about__since">Since 2004</span>
+        </div>
+        <b class="about__title-list">КАК Мы работаем:</b>
+        <ul class="about__list">
+          <li class="about__list-item">С самоотдачей 146%</li>
+          <li class="about__list-item">Соблюдая сроки на 100%</li>
+          <li class="about__list-item">По предоплате 50%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section developers">
+  <div class="developers__container">
+    <div class="developers__wrapper">
+      <div class="developers__item">
+        <source media="(min-width: 1200px)" srcset="img/glukhanko.png, img/glukhanko@3x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/glukhanko.png, img/glukhanko@2x.png 2x">
+          <img class="about__img" src="/img/glukhanko.png" width="198" height="37" alt="glukhanko">
+      </div>
+      <div class="developers__item">
+        <source media="(min-width: 1200px)" srcset="img/html-academy.png, img/html-academy@3x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/html-academy.png, img/html-academy@2x.png 2x">
+          <img class="about__img" src="/img/html-academy.png" width="199" height="68" alt="html-academy">
+      </div>
+      <div class="developers__item">
+        <source media="(min-width: 1200px)" srcset="img/barbershop.png, img/barbershop@3x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/barbershop.png, img/barbershop@2x.png 2x">
+          <img class="about__img" src="/img/barbershop.png" width="209" height="90" alt="barbershop">
+      </div>
+    </div>
+  </div>
+</div>
 @@include('blocks/page-footer/page-footer.html')
 @@include('_include/page-bottom.html')
 </body>

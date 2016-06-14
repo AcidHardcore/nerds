@@ -4,7 +4,7 @@
 @import "../../sass/mixins/mixins";
 
 .page-header {
-  background-color: #eeeeee;
+  background-color: $gray-lighter;
   &__container {
     @include container();
   }

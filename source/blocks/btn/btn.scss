@@ -25,14 +25,40 @@
     @include btn-size(sm);
   }
   &--slider{
-    padding-right: 71px;
-    padding-left: 71px;
+    padding-right: 7.1rem;
+    padding-left: 7.1rem;
   }
-  &--slider:hover{
+  &--web-cite{
+    padding: .9rem 4rem;
+  }
+  &--app{
+    background-color: #00ca74;
+    padding: .9rem 4rem;
+  }
+  &--presentation{
+    background-color: #efc84a;
+    padding: .9rem 4rem;
+  }
+  &:hover{
     background-color: #d6494d;
   }
-  &--slider:active{
+  &:active,
+  &:focus{
     background-color: #b63538;
+  }
+  &--app:hover{
+    background-color: #01a25e;
+  }
+  &--app:active,
+  &--app:focus {
+    background-color: #009053;
+  }
+  &--presentation:hover{
+    background-color: #d6ae2c;
+  }
+  &--presentation:active,
+  &--presentation:focus {
+    background-color: #c09b24;
   }
   &--block {
     width: 100%;

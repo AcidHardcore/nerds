@@ -1,3 +1,30 @@
 .services {
-
+  &__container {
+    @include container();
+  }
+  &__wrapper {
+    @include row();
+    padding: 63px 0;
+    border-bottom: 2px solid $gray-lighter;
+  }
+  &__item {
+    @include col(xl, 3, 11);
+  }
+  &__item:not(:first-child) {
+    @include col-offset(xl, 1);
+  }
+  &__img{
+    margin-bottom: 1.8rem;
+  }
+  &__title{
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-bottom: 2.7rem;
+    text-transform: uppercase;
+  }
+  &__desc{
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
 }

@@ -1,0 +1,77 @@
+.about {
+  &__container {
+    @include container();
+  }
+  &__wrapper {
+    @include row();
+    padding-top: 6rem;
+    padding-bottom: 7.5rem;
+    border-bottom: 2px solid $gray-lighter;
+  }
+  &__left {
+    @include col(xl, 7);
+  }
+  &__right {
+    @include col(xl, 3);
+    @include col-offset(xl, 1);
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__desc {
+    margin-bottom: 50px;
+  }
+  &__title-list {
+    display: block;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+  }
+  &__list {
+    margin: 0;
+    list-style: none;
+  }
+  &__list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__list-item {
+    position: relative;
+  }
+  &__list-item:before {
+    position: absolute;
+    content: '';
+    display: block;
+    border-top:1px solid $color-red;
+    width: 20px;
+    left: -30px;
+    top: 8px;
+  }
+  &__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    text-align: center;
+
+  }
+  &__since-wrapper {
+    margin-bottom: 113px;
+    text-align: center;
+
+  }
+  &__since {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    padding: 0 15px;
+  }
+  &__since-wrapper:after {
+    display: block;
+    position: relative;
+    content: '';
+    z-index: 1;
+    border-bottom: 2px solid $gray-lighter;
+    bottom: 12px;
+  }
+}
