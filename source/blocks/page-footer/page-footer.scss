@@ -7,6 +7,8 @@
   }
   &__wrapper {
     @include row();
+    padding-top: 80px;
+    padding-bottom: 75px;
   }
   &__left {
     @include col(xl, 3);
@@ -31,11 +33,18 @@
   }
   &__social i {
     font-size: $line-height;
+    color: #ffffff;
   }
   &__social:hover{
     background-color: #d6494d;
   }
   &__social:active  {
     background-color: #b63538;
+  }
+  &__title {
+    margin-top: 0;
+  }
+  &__desc{
+    margin: 0;
   }
 }

@@ -4,8 +4,12 @@
   }
   &__wrapper {
     @include row();
-    padding-top: 6rem;
-    padding-bottom: 7.5rem;
+  }
+  &__wrapper--one {
+    padding-top: 60px;
+  }
+  &__wrapper--two {
+    padding-bottom: 75px;
     border-bottom: 2px solid $gray-lighter;
   }
   &__left {
@@ -40,7 +44,7 @@
     position: absolute;
     content: '';
     display: block;
-    border-top:1px solid $color-red;
+    border-top: 1px solid $color-red;
     width: 20px;
     left: -30px;
     top: 8px;
@@ -54,7 +58,7 @@
 
   }
   &__since-wrapper {
-    margin-bottom: 113px;
+    //margin-bottom: 11.3rem;
     text-align: center;
 
   }

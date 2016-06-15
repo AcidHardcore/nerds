@@ -16,7 +16,6 @@
     url("/fonts/robotomedium.woff2") format("woff2");
 }
 
-
 [class^="icon-"]::before,
 [class*=" icon-"]::before {
     display: inline-block;
@@ -36,18 +35,64 @@
     speak: none;
 }
 
-.icon-basket::before { content: "\62"; } /* "b" */
-.icon-facebook::before { content: "\66"; } /* "f" */
-.icon-twitter::before { content: "\74"; } /* "t" */
-.icon-vk::before { content: "\76"; } /* "v" */
-.icon-up-dir::before { content: "\25b2"; } /* "▲" */
-.icon-down-dir::before { content: "\25bc"; } /* "▼" */
-.icon-circle::before { content: "\25cb"; } /* "○" */
-.icon-circle-dot::before { content: "\25cf"; } /* "●" */
-.icon-check-off::before { content: "\2610"; } /* "☐" */
-.icon-check-on::before { content: "\2611"; } /* "☑" */
-.icon-instagramm::before { content: "📷"; } /* "\1f4f7" */
+.icon-basket::before {
+    content: "\62";
+}
 
+/* "b" */
+.icon-facebook::before {
+    content: "\66";
+    color: #ffffff;
+}
+
+/* "f" */
+.icon-twitter::before {
+    content: "\74";
+}
+
+/* "t" */
+.icon-vk::before {
+    content: "\76";
+    color: #ffffff;
+}
+
+/* "v" */
+.icon-up-dir::before {
+    content: "\25b2";
+}
+
+/* "▲" */
+.icon-down-dir::before {
+    content: "\25bc";
+}
+
+/* "▼" */
+.icon-circle::before {
+    content: "\25cb";
+}
+
+/* "○" */
+.icon-circle-dot::before {
+    content: "\25cf";
+}
+
+/* "●" */
+.icon-check-off::before {
+    content: "\2610";
+}
+
+/* "☐" */
+.icon-check-on::before {
+    content: "\2611";
+}
+
+/* "☑" */
+.icon-instagramm::before {
+    content: "📷";
+    color: #ffffff;
+}
+
+/* "\1f4f7" */
 
 /* Peppermint required styles + default appearance styles */
 
@@ -84,10 +129,10 @@
 .peppermint.peppermint-active .peppermint-dots,
 .peppermint.peppermint-active .peppermint-slides,
 .peppermint.peppermint-active .peppermint-slides > * {
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;

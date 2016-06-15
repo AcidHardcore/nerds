@@ -1,21 +1,18 @@
 .map {
-  height: 415px;
+  min-height: 415px;
   background-color: #ffffff;
   background-image: url("/img/map.jpg");
+  position: relative;
   @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url("/img/map@2x.jpg");
   }
-  &__container {
-    @include container();
-  }
-  &__wrapper {
-    @include row();
-  }
   &__contacts {
-    @include col(xl, 3, 11, 40px);
-    margin-top: 90px;
+    width: 24.5rem;
+    top: 90px;
+    left: 16.5%;
     background-color: #ffffff;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 2rem;
+    position: absolute;
+    z-index: 2;
   }
 }

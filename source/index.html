@@ -79,18 +79,12 @@
 </section>
 <section class="about">
   <div class="about__container">
-    <div class="about__wrapper">
+    <div class="about__wrapper about__wrapper--one">
       <div class="about__left">
         <h1 class="about__title">Мы — маленькая, но гордая
           дизайн-студия из Краснодара. </h1>
         <p class="about__desc">Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива.
           Работаем не покладая рук, как роботы.</p>
-        <b class="about__title-list">Выполняем заказы на разработку:</b>
-        <ul class="about__list">
-          <li class="about__list-item">Веб-сайтов любой сложности</li>
-          <li class="about__list-item">Мобильных приложений для iOS и Android</li>
-          <li class="about__list-item">Слайдшоу и видео для корпоративных презентаций</li>
-        </ul>
       </div>
       <div class="about__right">
         <picture>
@@ -101,6 +95,18 @@
         <div class="about__since-wrapper">
           <span class="about__since">Since 2004</span>
         </div>
+      </div>
+    </div>
+    <div class="about__wrapper about__wrapper--two">
+      <div class="about__left">
+        <b class="about__title-list">Выполняем заказы на разработку:</b>
+        <ul class="about__list">
+          <li class="about__list-item">Веб-сайтов любой сложности</li>
+          <li class="about__list-item">Мобильных приложений для iOS и Android</li>
+          <li class="about__list-item">Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+      </div>
+      <div class="about__right">
         <b class="about__title-list">КАК Мы работаем:</b>
         <ul class="about__list">
           <li class="about__list-item">С самоотдачей 146%</li>
@@ -123,17 +129,7 @@
     </div>
   </div>
 </section>
-<section class="map">
-  <div class="map__container">
-    <div class="map__wrapper">
-      <div class="map__contacts">
-        <b class="map__contacts-title">NЁRDS DESIGN STUDIO</b>
-        <p class="map__contacts-desc">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 тел. +7 (812) 275-75-75</p>
-        <button class="btn btn--map" type="button">Напишите нам</button>
-      </div>
-    </div>
-  </div>
-</section>
+@@include('blocks/map/map.html')
 @@include('blocks/page-footer/page-footer.html')
 @@include('_include/page-bottom.html')
 </body>
