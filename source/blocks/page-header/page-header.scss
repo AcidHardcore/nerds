@@ -9,7 +9,7 @@
     @include container();
   }
   &__wrapper {
-    @include row();
+    @include row(0);
     @media (min-width: $screen-xl) {
 
       min-height: 136px;
@@ -17,15 +17,14 @@
     align-items: center;
     text-align: center;
 
-    font-size: 14px;
-    line-height: 30px;
+    font-size: 1.4rem;
+    line-height: 3rem;
     text-transform: uppercase;
   }
   &__cart {
-    @include col(xl, 1.5);
+    @include col(xl, 2,11,0);
     @media (min-width: $screen-xl) {
-      padding-left: 27px;
-      padding-right: 0;
+      text-align: right;
     }
   }
   &__cart a:visited {

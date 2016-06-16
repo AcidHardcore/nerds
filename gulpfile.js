@@ -181,7 +181,7 @@ gulp.task('watch', function () {
 gulp.task('serve', function () {
     browserSync.init({
         server: {
-            baseDir: "./build/",
+            baseDir: "./build/"
             // index: "/build/test.html"   it's need where index.html in the root folder
         }
     });

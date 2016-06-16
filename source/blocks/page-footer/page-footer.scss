@@ -7,11 +7,11 @@
   }
   &__wrapper {
     @include row();
-    padding-top: 80px;
-    padding-bottom: 75px;
+    padding-top: 8rem;
+    padding-bottom: 7.5rem;
   }
   &__left {
-    @include col(xl, 3);
+    @include col(xl, 3,11);
     @media (min-width: $screen-xl) {
       display: flex;
       align-items: center;
@@ -19,13 +19,13 @@
     }
   }
   &__right {
-    @include col(xl, 7);
+    @include col(xl, 7,11);
     @include col-offset(xl,1);
   }
   &__social {
     width: 64px;
     height: 64px;
-    background-color: $gray-lighter;
+    background-color: $gray-light;
     border-radius: 50%;
     display: flex;
     align-items: center;

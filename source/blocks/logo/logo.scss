@@ -6,6 +6,6 @@
 
 .logo {
   white-space: nowrap;
-  @include col(xl, 2);
-  margin-bottom: 15px;
+  @include col(xl, 2,11,0);
+  //margin-bottom: 15px;
 }

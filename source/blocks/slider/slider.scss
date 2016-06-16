@@ -5,22 +5,22 @@
   }
   &__wrapper{
     @include row();
-    padding-bottom: 80px;
+    padding-bottom: 8rem;
   }
   &__left{
-    @include col(xl,5);
+    @include col(xl,5,11);
   }
   &__desc{
     width: 370px;
   }
   &__paginator{
-    @include col(xl,1);
+    @include col(xl,1,11);
     align-self: flex-end;
 
     //another property in additinal.css
   }
   &__right{
-    @include col(xl,5);
+    @include col(xl,5,11);
   }
   &__img{
     margin-left: 54px;

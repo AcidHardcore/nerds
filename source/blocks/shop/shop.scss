@@ -1,0 +1,235 @@
+.shop {
+  &__title-wrapper {
+    @include row();
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: $gray-lighter;
+    justify-content: center;
+  }
+  &__title {
+    @include col(xl, 6, 11, 5rem);
+    margin: 0;
+    font-size: 4rem;
+  }
+  &__container {
+    @include container();
+  }
+  &__wrapper {
+    @include row($xl-grid-gutter: 0);
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+  &__left {
+    @include col(xl, 3, 11, 0);
+  }
+  &__price-top {
+    background: #f1f1f1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    margin-bottom: 15px;
+  }
+  &__circle {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.14);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__dot {
+    width: 4px;
+    height: 4px;
+    background: $gray-light;
+    border-radius: 50%;
+  }
+  &__line {
+    width: 40px;
+    height: 2px;
+    background: #d7dcde;
+  }
+  &__line--green {
+    width: 120px;
+    background: #01a25e;
+  }
+  &__price-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__price-bottom input {
+    background: #f1f1f1;
+    width: 80px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0;
+    border: 0;
+  }
+  &__price-bottom label {
+    line-height: 37px;
+  }
+  &__left legend {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__left fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0 0 25px;
+  }
+  &__left:not(:last-child) input[type=radio],
+  &__left:not(:last-child) input[type=checkbox] {
+    display: none;
+  }
+  &__left input[type=radio] + .icon-circle ,
+  &__left input[type=checkbox] + .icon-check-off {
+    //display: none;
+    //position: absolute;
+  }
+  &__label-grid,
+  &__label-feature {
+    position: relative;
+    cursor: pointer;
+    color: #283136;
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
+  &__label-price {
+    padding: 0;
+    color: #283136;
+    cursor: pointer;
+  }
+  &__left label:hover {
+    color: #000000;
+  }
+  &__left input[type=radio]:checked ~ .icon-circle-dot,
+  &__left input[type=checkbox]:checked ~ .icon-check-on {
+    display: inline-block;
+  }
+  &__left input[type=radio]:checked + .icon-circle,
+  &__left input[type=checkbox]:checked + .icon-check-off {
+    display: none;
+  }
+  &__right {
+    @include col(xl, 7, 11, 0);
+    @include col-offset(xl, 1);
+    margin-bottom: 25px;
+
+  }
+  &__wrapper-sort {
+    @include col(xl, 11, 11, 0);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__sort {
+    margin-right: auto;
+  }
+  &__sort-type {
+    margin-right: auto;
+    color: $gray-light;
+    border-bottom: 2px dotted #01a25e;
+  }
+  &__sort-type:hover {
+    border-bottom: 2px solid #01a25e;
+    color: $gray-light;
+    text-decoration: none;
+  }
+  &__sort-type:active,
+  &__sort-type:focus {
+    border: 0;
+  }
+  &__descending:focus i:before,
+  &__ascending:focus i:before {
+    color: #01a25e;
+  }
+  &__descending:active i:before,
+  &__ascending:active i:before {
+    color: $black;
+  }
+  &__wrapper-items {
+    @include row(0);
+    align-items: stretch;
+  }
+  &__item {
+    @include col(xl, 4.6, 11, 0);
+    position: relative;
+    margin-bottom: 55px;
+  }
+  &__item:nth-child(2n) {
+    @include col-offset(xl, 1.7);
+  }
+  &__item:hover &__caption {
+    background: #797979;
+  }
+  &__item:hover &__tag {
+    display: flex;
+  }
+  &__caption {
+    display: flex;
+    background: #f1f1f1;
+    width: 240px;
+    padding-left: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  &__caption-circle {
+    margin: 10px 0;
+    margin-left: 10px;
+    background: #ffffff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  &__tag {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px 20px;
+    text-align: center;
+    //display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+  }
+  &__tag-title {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__tag-desc {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+  }
+  &__paginator {
+    @include col(xl, 4, 11, 0);
+    @include col-offset(xl, 4);
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  & label {
+    display: flex;
+  }
+  &__price-bottom {
+    display: flex;
+  }
+}

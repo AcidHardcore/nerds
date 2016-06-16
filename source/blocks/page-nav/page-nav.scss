@@ -2,11 +2,11 @@
 @import "../../sass/variables";
 
 .page-nav {
-  @include col(xl, 5.4);
-  @include col-offset(xl, 1.95);
+  @include col(xl, 6.9,11,0);
   &__list {
     @media (min-width: $screen-xl) {
       display: flex;
+      justify-content: flex-end;
       flex-wrap: wrap;
       list-style: none;
       padding: 0;
@@ -15,11 +15,10 @@
   }
   &__item {
     @media (min-width: $screen-xl) {
-      line-height: 30px;}
+      line-height: 3rem;}
   }
   &__item:not(:last-child){
     margin-right: 44px;
-
   }
   &__link:visited {
     text-decoration: none;

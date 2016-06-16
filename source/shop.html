@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  @@include('_include/page-head.html')
+  <title>Магазин</title>
+</head>
+<body>
+@@include('blocks/page-header/page-header.html')
+<section class="shop">
+  <div class="shop__title-wrapper">
+    <h1 class="shop__title">Добро пожаловать в магазин готовых макетов</h1>
+  </div>
+  <div class="shop__container">
+    <div class="shop__wrapper">
+      <div class="shop__left">
+        <form action="#" method="post">
+          <fieldset>
+            <legend class="shop__legend">Стоимость:</legend>
+            <div class="shop__price-top">
+              <span class="shop__circle"><span class="shop__dot"></span></span>
+              <span class="shop__line shop__line--green"></span>
+              <span class="shop__circle"><span class="shop__dot"></span></span>
+              <span class="shop__line"></span>
+            </div>
+            <div class="shop__price-bottom">
+              <label class="shop__label-price">ОТ<input type="number" name="from" value="0"></label>
+              <label class="shop__label-price">ДО<input type="number" name="till" value="15000"></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="shop__legend">Сетка:</legend>
+            <label class="shop__label-grid">
+              <input type="radio" name="grid" checked>
+              <i class="icon-circle"></i>
+              <i class="icon-circle-dot"></i>
+              Адаптивная
+            </label>
+            <label class="shop__label-grid">
+              <input type="radio" name="grid">
+              <i class="icon-circle"></i>
+              <i class="icon-circle-dot"></i>
+              Фиксированная
+            </label>
+            <label class="shop__label-grid">
+              <input type="radio" name="grid">
+              <i class="icon-circle"></i>
+              <i class="icon-circle-dot"></i>
+              Резиновая
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend class="shop__legend">Особенности:</legend>
+            <label class="shop__label-feature">
+              <input type="checkbox" checked>
+              <i class="icon-check-off"></i>
+              <i class="icon-check-on"></i>
+              Слайдер
+            </label>
+            <label class="shop__label-feature">
+              <input type="checkbox">
+              <i class="icon-check-off"></i>
+              <i class="icon-check-on"></i>
+              Блок преимуществ
+            </label>
+            <label class="shop__label-feature">
+              <input type="checkbox" checked>
+              <i class="icon-check-off"></i>
+              <i class="icon-check-on"></i>
+              Новости
+            </label>
+            <label class="shop__label-feature">
+              <input type="checkbox">
+              <i class="icon-check-off"></i>
+              <i class="icon-check-on"></i>
+              Галерея
+            </label>
+            <label class="shop__label-feature">
+              <input type="checkbox">
+              <i class="icon-check-off"></i>
+              <i class="icon-check-on"></i>
+              Корзина
+            </label>
+          </fieldset>
+          <button class="btn btn--shop-submit" type="submit">Показать</button>
+        </form>
+      </div>
+      <div class="shop__right">
+        <div class="shop__wrapper-sort">
+          <b class="shop__sort">Сортировать:</b>
+          <a class="shop__sort-type" href="#"> по цене</a>
+          <a class="shop__sort-type" href="#">по типу</a>
+          <a class="shop__sort-type" href="#">по функционалу</a>
+          <a href="#" class="shop__descending"><i class="icon-down-dir"></i></a>
+          <a href="#" class="shop__ascending"><i class="icon-up-dir"></i></a>
+        </div>
+        <div class="shop__wrapper-items">
+          <div class="shop__item">
+            <div class="shop__caption">
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+            </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/aviator.jpg, img/aviator@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/aviator.jpg, img/aviator@2x.jpg 2x">
+              <img class="shop__img" src="/img/aviator.jpg" width="240" height="240" alt="aviator">
+            </picture>
+            <div class="shop__tag">
+              <b class="shop__tag-title">Aviator</b>
+              <p class="shop__tag-desc">Одностраничный макет с авторским дизайном</p>
+              <button class="btn" type="button">8000 Р.</button>
+            </div>
+          </div>
+          <div class="shop__item">
+            <div class="shop__caption">
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+            </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/sunset.jpg, img/sunset@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/sunset.jpg, img/sunset@2x.jpg 2x">
+              <img class="shop__img" src="/img/sunset.jpg" width="240" height="240" alt="sunset">
+            </picture>
+            <div class="shop__tag">
+              <b class="shop__tag-title">sunset</b>
+              <p class="shop__tag-desc">Интернет магазин с личным кабинетом</p>
+              <button class="btn" type="button">10000 Р.</button>
+            </div>
+          </div>
+          <div class="shop__item">
+            <div class="shop__caption">
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+            </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/forte.jpg, img/forte@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/forte.jpg, img/forte@2x.jpg 2x">
+              <img class="shop__img" src="/img/forte.jpg" width="240" height="240" alt="forte">
+            </picture>
+            <div class="shop__tag">
+              <b class="shop__tag-title">Forte</b>
+              <p class="shop__tag-desc">Отличный макет для личного блога</p>
+              <button class="btn" type="button">5000 Р.</button>
+            </div>
+          </div>
+          <div class="shop__item">
+            <div class="shop__caption">
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+            </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/thai.jpg, img/thai@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/thai.jpg, img/thai@2x.jpg 2x">
+              <img class="shop__img" src="/img/thai.jpg" width="240" height="240" alt="thai">
+            </picture>
+            <div class="shop__tag">
+              <b class="shop__tag-title">Modern Organic Thai</b>
+              <p class="shop__tag-desc">Сайт для ресторана быстрого питания</p>
+              <button class="btn" type="button">12000 Р.</button>
+            </div>
+          </div>
+          <div class="shop__item">
+            <div class="shop__caption">
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+            </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/avenue.jpg, img/avenue@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/avenue.jpg, img/avenue@2x.jpg 2x">
+              <img class="shop__img" src="/img/avenue.jpg" width="240" height="240" alt="avenue">
+            </picture>
+            <div class="shop__tag">
+              <b class="shop__tag-title">Aviator</b>
+              <p class="shop__tag-desc">Макет для блога о путешествиях</p>
+              <button class="btn" type="button">8000 Р.</button>
+            </div>
+          </div>
+          <div class="shop__item">
+            <div class="shop__caption">
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+              <span class="shop__caption-circle"></span>
+            </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/dovetail.jpg, img/dovetail@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/dovetail.jpg, img/dovetail@2x.jpg 2x">
+              <img class="shop__img" src="/img/dovetail.jpg" width="240" height="240" alt="dovetail">
+            </picture>
+            <div class="shop__tag">
+              <b class="shop__tag-title">Dovetail</b>
+              <p class="shop__tag-desc">Интеренет магазин</p>
+              <button class="btn" type="button">14000 Р.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shop__paginator">
+        <a href="#" class="btn btn--paginator-number" role="button">1</a>
+        <a href="#" class="btn btn--paginator-number" role="button">2</a>
+        <a href="#" class="btn btn--paginator-number" role="button">3</a>
+        <a href="#" class="btn btn--paginator-next" role="button">Следующая</a>
+      </div>
+    </div>
+  </div>
+</section>
+@@include('blocks/map/map.html')
+@@include('blocks/page-footer/page-footer.html')
+@@include('_include/page-bottom.html')
+</body>
+</html>

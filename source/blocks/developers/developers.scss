@@ -5,21 +5,15 @@
   &__wrapper {
     @include row();
     border-bottom: 2px solid $gray-lighter;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
     align-items: center;
+    justify-content: space-around;
   }
   &__item-1,
   &__item-2,
   &__item-3 {
-    @include col(xl, 3);
-  }
-  &__item-1 {
-    @include col-offset(xl, 0.5);
-  }
-  &__item-2,
-  &__item-3 {
-    @include col-offset(xl, 0.75);
+    @include col(xl, 3,11);
   }
   &__item-1 {
     width: 198px;

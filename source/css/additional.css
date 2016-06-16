@@ -59,31 +59,48 @@
 /* "v" */
 .icon-up-dir::before {
     content: "\25b2";
+    color: #b1b1b1;
 }
+.icon-up-dir {
+    font-size: 2.3rem;
+    line-height: 1;
 
+}
 /* "▲" */
 .icon-down-dir::before {
     content: "\25bc";
+    color: #b1b1b1;
+}
+.icon-down-dir{
+    font-size: 2.3rem;
+    line-height: 1;
 }
 
 /* "▼" */
 .icon-circle::before {
     content: "\25cb";
+    font-size: 28px;
+    line-height: 22px;
 }
-
 /* "○" */
 .icon-circle-dot::before {
     content: "\25cf";
+    font-size: 28px;
+    line-height: 22px;
 }
 
 /* "●" */
 .icon-check-off::before {
     content: "\2610";
+    font-size: 28px;
+    line-height: 22px;
 }
 
 /* "☐" */
 .icon-check-on::before {
     content: "\2611";
+    font-size: 28px;
+    line-height: 22px;
 }
 
 /* "☑" */
@@ -91,7 +108,20 @@
     content: "📷";
     color: #ffffff;
 }
-
+.icon-check-on,
+.icon-circle-dot {
+    position: absolute;
+    left: 0;
+    display: none;
+}
+.icon-check-off,
+.icon-circle {
+    position: absolute;
+    left: 0;
+}
+.icon-check-off{
+    left: -2px;
+}
 /* "\1f4f7" */
 
 /* Peppermint required styles + default appearance styles */

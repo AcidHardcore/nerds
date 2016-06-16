@@ -24,44 +24,86 @@
   &--sm {
     @include btn-size(sm);
   }
-  &--slider{
+  &--slider {
     padding-right: 7.1rem;
     padding-left: 7.1rem;
   }
-  &--web-cite{
+  &--web-cite {
     padding: .9rem 4rem;
   }
-  &--app{
+  &--app {
     background-color: #00ca74;
     padding: .9rem 4rem;
   }
-  &--presentation{
+  &--presentation {
     background-color: #efc84a;
     padding: .9rem 4rem;
   }
-  &--map{
+  &--map {
     width: 100%;
   }
-  &:hover{
+  &--shop-submit {
+    margin-top: 60px;
+    padding-left: 55px;
+    padding-right: 55px;
+    background-color: #f1f1f1;
+    color: $black;
+  }
+  &--paginator-number {
+    background-color: #f1f1f1;
+    color: $black;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &--paginator-next {
+    background-color: #f1f1f1;
+    color: $black;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &:hover {
     background-color: #d6494d;
   }
   &:active,
-  &:focus{
+  &:focus {
     background-color: #b63538;
   }
-  &--app:hover{
+  &--app:hover {
     background-color: #01a25e;
   }
   &--app:active,
   &--app:focus {
     background-color: #009053;
   }
-  &--presentation:hover{
+  &--presentation:hover {
     background-color: #d6ae2c;
   }
   &--presentation:active,
   &--presentation:focus {
     background-color: #c09b24;
+  }
+  &--shop-submit:hover,
+  &--paginator-number:hover,
+  &--paginator-next:hover {
+    background-color: #e5e5e5;
+    color: $black;
+  }
+  &--shop-submit:active,
+  &--shop-submit:focus,
+  &--paginator-number:active,
+  &--paginator-next:active {
+    background-color: #d5d5d5;
+    color: $black;
+    border-top: 1px solid #b5b5b5;
+  }
+  &--paginator-number:focus {
+    border: 1px solid #d5d5d5;
+    color: $black;
+    background-color: #ffffff;
+  }
+  &--paginator-next:focus {
+    background: #d5d5d5;
+    color: $black;
   }
   &--block {
     width: 100%;
