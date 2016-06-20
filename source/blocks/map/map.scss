@@ -2,9 +2,13 @@
   min-height: 415px;
   background-color: #ffffff;
   background-image: url("/img/map.jpg");
+  background-size: contain;
+  background-position: center;
   position: relative;
   @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url("/img/map@2x.jpg");
+    background-size: contain;
+    background-position: center;
   }
   &__contacts {
     width: 24.5rem;
@@ -14,5 +18,8 @@
     padding: 3rem 2rem;
     position: absolute;
     z-index: 2;
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }

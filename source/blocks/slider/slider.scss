@@ -1,28 +1,65 @@
 .slider {
   background-color: $gray-lighter;
-  &__container{
+  &__container {
     @include container();
   }
-  &__wrapper{
+  &__wrapper {
     @include row();
     padding-bottom: 8rem;
+    @media (max-width: 767px) {
+      padding-bottom: $line-height*2;
+      padding-top: $line-height;
+    }
   }
-  &__left{
-    @include col(xl,5,11);
+  &__left {
+    @include col(xs, 11);
+    text-align: center;
+    @media (max-width: $screen-xl) {
+
+    }
+    @include col(xl, 5, 11);
+    @media (min-width: $screen-md) {
+      order: 3;
+    }
+    @media (min-width: $screen-xl) {
+      text-align: left;
+      order: 1;
+    }
   }
-  &__desc{
-    width: 370px;
+  &__title {
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
   }
-  &__paginator{
-    @include col(xl,1,11);
+  &__desc {
+    @media (min-width: $screen-xl) {
+      width: 370px;
+    }
+  }
+  &__paginator {
+    @media (max-width: 767px) {
+      display: none;
+    }
+    @media (min-width: $screen-md) {
+      order: 2;
+    }
+    @include col(xl, 1, 11);
     align-self: flex-end;
 
     //another property in additinal.css
   }
-  &__right{
-    @include col(xl,5,11);
+  &__right {
+    @media (max-width: 767px) {
+      display: none;
+    }
+    @include col(xl, 5, 11);
+    @media (min-width: $screen-xl) {
+      order: 3;
+    }
   }
-  &__img{
-    margin-left: 54px;
+  &__img {
+    @media (min-width: $screen-xl) {
+      margin-left: 54px;
+    }
   }
 }

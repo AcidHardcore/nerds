@@ -6,23 +6,43 @@
     @include row();
     padding: 6.3rem 0;
     border-bottom: 2px solid $gray-lighter;
+
+    @media (max-width: 767px) {
+      padding-bottom: $line-height*2;
+      padding-top: $line-height*2;
+      text-align: center;
+    }
+    @media (min-width: $screen-md) {
+      justify-content: center;
+    }
   }
   &__item {
+    @include col(xs, 11);
+    @include col(md, 3.66, 11);
     @include col(xl, 3, 11);
   }
   &__item:not(:first-child) {
     @include col-offset(xl, 1);
   }
-  &__img{
+  &__item:not(:last-child) {
+    @media (max-width: 767px) {
+      margin-bottom: $line-height*3;
+    }
+  }
+  &__img {
     margin-bottom: 1.8rem;
   }
-  &__title{
+  &__title {
+    @media (min-width: $screen-xs) {
+      display: block;
+    }
+
     font-size: 1.8rem;
     line-height: 3rem;
     margin-bottom: 2.7rem;
     text-transform: uppercase;
   }
-  &__desc{
+  &__desc {
     margin-bottom: 3rem;
     font-size: 1.4rem;
     line-height: 1.8rem;

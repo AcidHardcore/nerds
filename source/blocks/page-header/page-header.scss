@@ -5,12 +5,13 @@
 
 .page-header {
   background-color: $gray-lighter;
+  //position: relative;
   &__container {
     @include container();
   }
   &__wrapper {
     @include row(0);
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-md) {
 
       min-height: 136px;
     }
@@ -22,7 +23,8 @@
     text-transform: uppercase;
   }
   &__cart {
-    @include col(xl, 2,11,0);
+    @include col(xs, 6,11,0);
+    @include col(md, 2,11,0);
     @media (min-width: $screen-xl) {
       text-align: right;
     }

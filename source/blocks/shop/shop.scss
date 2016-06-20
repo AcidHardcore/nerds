@@ -1,27 +1,45 @@
 .shop {
-  &__title-wrapper {
-    @include row();
-    padding-top: 40px;
-    padding-bottom: 80px;
-    text-align: center;
-    background-color: $gray-lighter;
-    justify-content: center;
-  }
   &__title {
-    @include col(xl, 6, 11, 5rem);
+    background-color: $gray-lighter;
+  }
+  &__title-container {
+    @include container();
+  }
+  &__title-wrapper {
+    @include row(0);
+    padding-top: $line-height;
+    padding-bottom: $line-height*2;
+    text-align: center;
+    justify-content: center;
+    @media (min-width: $screen-xl) {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+  }
+  &__caption-h1 {
+    @include col(xs, 11, 11, 0);
+    @include col(xl, 8, 11, 0);
     margin: 0;
-    font-size: 4rem;
+    font-size: 3.6rem;
+    @media (min-width: $screen-xl) {
+      font-size: 4rem;
+    }
   }
   &__container {
     @include container();
   }
   &__wrapper {
-    @include row($xl-grid-gutter: 0);
-    padding-bottom: 80px;
-    padding-top: 80px;
+    @include row();
+    padding-top: $line-height*2;
+    padding-bottom: $line-height*2;
+    @media (min-width: $screen-xl) {
+      padding-bottom: 80px;
+      padding-top: 80px;
+    }
   }
   &__left {
-    @include col(xl, 3, 11, 0);
+    @include col(md, 2.5, 11);
+    @include col(xl, 3, 11);
   }
   &__price-top {
     background: #f1f1f1;
@@ -48,23 +66,25 @@
     border-radius: 50%;
   }
   &__line {
-    width: 40px;
+    width: 30%;
     height: 2px;
     background: #d7dcde;
   }
   &__line--green {
-    width: 120px;
+    width: 45%;
     background: #01a25e;
   }
   &__price-bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+    }
   }
   &__price-bottom input {
     background: #f1f1f1;
-    width: 80px;
-    margin-left: 10px;
+    width: 70%;
+    //margin-left: 10px;
     border-radius: 5px;
     text-align: center;
     padding: 10px 0;
@@ -72,6 +92,15 @@
   }
   &__price-bottom label {
     line-height: 37px;
+    display: inline-flex;
+    justify-content: space-between;
+    padding-left: 5px;
+  }
+  &__price-bottom label:first-child {
+    margin-bottom: 15px;
+    @media (min-width: $screen-xl) {
+      margin: 0;
+    }
   }
   &__left legend {
     text-transform: uppercase;
@@ -86,7 +115,7 @@
   &__left:not(:last-child) input[type=checkbox] {
     display: none;
   }
-  &__left input[type=radio] + .icon-circle ,
+  &__left input[type=radio] + .icon-circle,
   &__left input[type=checkbox] + .icon-check-off {
     //display: none;
     //position: absolute;
@@ -116,18 +145,20 @@
     display: none;
   }
   &__right {
+    @include col(md, 8, 11, 0);
     @include col(xl, 7, 11, 0);
+    @include col-offset(md, 0.5);
     @include col-offset(xl, 1);
     margin-bottom: 25px;
 
   }
   &__wrapper-sort {
-    @include col(xl, 11, 11, 0);
+    @include col(xs, 11, 11, 0);
     margin-bottom: 20px;
     font-size: 1.2rem;
     line-height: 1.5;
     text-transform: uppercase;
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-md) {
       display: flex;
       justify-content: space-between;
     }
@@ -160,13 +191,19 @@
   &__wrapper-items {
     @include row(0);
     align-items: stretch;
+    justify-content: center;
   }
   &__item {
-    @include col(xl, 4.6, 11, 0);
+    @include col(md, 4.5, 11, 0);
+    @include col(xl, 4.5, 11, 0);
     position: relative;
-    margin-bottom: 55px;
+    margin-bottom: $line-height;
+    @media (min-width: $screen-xl) {
+      margin-bottom: 55px;
+    }
   }
   &__item:nth-child(2n) {
+    @include col-offset(md, 1);
     @include col-offset(xl, 1.7);
   }
   &__item:hover &__caption {
@@ -178,10 +215,13 @@
   &__caption {
     display: flex;
     background: #f1f1f1;
-    width: 240px;
+    width: 100%;
     padding-left: 5px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    @media (min-width: $screen-xl) {
+      width: 240px;
+    }
   }
   &__caption-circle {
     margin: 10px 0;
@@ -207,6 +247,9 @@
     flex-direction: column;
     justify-content: space-between;
     display: none;
+    //@media (min-width: $screen-xl) {
+    //  right: 7px;
+    //}
   }
   &__tag-title {
     text-transform: uppercase;
@@ -219,7 +262,9 @@
     margin: 0;
   }
   &__paginator {
+    @include col(md, 5, 11, 0);
     @include col(xl, 4, 11, 0);
+    @include col-offset(md, 3);
     @include col-offset(xl, 4);
     @media (min-width: $screen-xl) {
       display: flex;

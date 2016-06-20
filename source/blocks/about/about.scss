@@ -4,22 +4,44 @@
   }
   &__wrapper {
     @include row();
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   }
   &__wrapper--one {
     padding-top: 6rem;
+    @media (max-width: 767px) {
+      padding-top: $line-height*2;
+    }
   }
   &__wrapper--two {
     padding-bottom: 7.5rem;
     border-bottom: 2px solid $gray-lighter;
+    @media (max-width: 767px) {
+      padding-bottom: $line-height*2;
+    }
   }
   &__left {
-    @include col(xl, 7,11);
+    @include col(xs, 11);
+    @include col(md, 6.5, 11);
+    @include col(xl, 7, 11);
   }
   &__right {
-    @include col(xl, 3,11);
+    @include col(xs, 11);
+    @include col(md, 4.5, 11);
+    @include col(xl, 3, 11);
     @include col-offset(xl, 1);
+    @media (max-width: 767px) {
+      padding-top: $line-height*2;
+    }
+  }
+  &__right--xs {
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
   &__title {
+    margin-top: 0;
     margin-bottom: 3rem;
   }
   &__desc {
@@ -33,6 +55,9 @@
   &__list {
     margin: 0;
     list-style: none;
+    @media (max-width: 767px) {
+      text-align: left;
+    }
   }
   &__list-item:not(:last-child) {
     margin-bottom: 3rem;
@@ -58,7 +83,6 @@
 
   }
   &__since-wrapper {
-    //margin-bottom: 11.3rem;
     text-align: center;
 
   }

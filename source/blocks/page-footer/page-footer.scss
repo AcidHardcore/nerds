@@ -2,25 +2,41 @@
 @import '../../sass/variables'; // только для удобства обращения к переменным
 
 .page-footer {
+  overflow: hidden;
   &__container {
     @include container();
   }
   &__wrapper {
     @include row();
-    padding-top: 8rem;
-    padding-bottom: 7.5rem;
+    padding-top: $line-height*2;
+    padding-bottom: $line-height*2;
+    @media (min-width: $screen-xl) {
+      padding-top: 8rem;
+      padding-bottom: 7.5rem;
+    }
   }
   &__left {
+    @include col(xs, 11);
+    @include col(md, 4,11);
     @include col(xl, 3,11);
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xs) {
       display: flex;
       align-items: center;
       justify-content: space-around;
     }
+    @media (max-width: 767px) {
+      order:2;
+    }
   }
   &__right {
+    @include col(xs, 11);
+    @include col(md, 6,11);
     @include col(xl, 7,11);
     @include col-offset(xl,1);
+    @media (max-width: 767px) {
+      text-align: center;
+      margin-bottom: $line-height;
+    }
   }
   &__social {
     width: 64px;

@@ -9,57 +9,91 @@
     padding-bottom: 4.5rem;
     align-items: center;
     justify-content: space-around;
+    @media (max-width: 767px) {
+      padding-bottom: $line-height*2;
+      padding-top: $line-height*2;
+    }
   }
   &__item-1,
   &__item-2,
   &__item-3 {
-    @include col(xl, 3,11);
+    @include col(xs, 11);
+    @include col(md, 3,11);
+  }
+  &__item-1,
+  &__item-2 {
+    @media (max-width: 767px) {
+      margin-bottom: $line-height;
+    }
   }
   &__item-1 {
     width: 198px;
     height: 37px;
     background: #ffffff url("/img/glukhanko.png") no-repeat;
+    background-size: contain;
+    background-position: center;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: #ffffff url("/img/glukhanko@2x.png") no-repeat;
+      background-size: contain;
+      background-position: center;
+
     }
   }
-
   &__item-2 {
     width: 199px;
     height: 68px;
     background: #ffffff url("/img/html-academy.png") no-repeat;
+    background-size: contain;
+    background-position: center;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: #ffffff url("/img/html-academy@2x.png") no-repeat;
-
+      background-size: contain;
+      background-position: center;
     }
   }
   &__item-3 {
     width: 209px;
     height: 90px;
     background: #ffffff url("/img/barbershop.png") no-repeat;
+    background-size: contain;
+    background-position: center;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: #ffffff url("/img/barbershop@2x.png") no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
   &__item-1:hover,
   &__item-1:active {
     background: #ffffff url("/img/glukhanko-black.png") no-repeat;
+    background-size: contain;
+    background-position: center;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background: #ffffff url("/img/glukhanko@2x-black.png") no-repeat;
+      background: #ffffff url("/img/glukhanko-black@2x.png") no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
   &__item-2:hover,
   &__item-2:active {
     background: #ffffff url("/img/html-academy-black.png") no-repeat;
+    background-size: contain;
+    background-position: center;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: #ffffff url("/img/html-academy-black@2x.png") no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
   &__item-3:hover,
   &__item-3:active {
     background: #ffffff url("/img/barbershop-black.png") no-repeat;
+    background-size: contain;
+    background-position: center;
     @media(min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: #ffffff url("/img/barbershop-black@2x.png") no-repeat;
+      background-size: contain;
+      background-position: center;
     }
   }
 

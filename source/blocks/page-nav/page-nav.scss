@@ -2,23 +2,37 @@
 @import "../../sass/variables";
 
 .page-nav {
-  @include col(xl, 6.9,11,0);
+  position: relative;
+  @include col(xs, 11);
+  @include col(md, 6.9, 11, 0);
+  @media (max-width: 767px) {
+    min-height: 30px;
+    order: 2;
+  }
   &__list {
-    @media (min-width: $screen-xl) {
-      display: flex;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    @media (max-width: 767px) {
+
+    }
+    @media (min-width: $screen-md) {
+      flex-direction: row;
       justify-content: flex-end;
       flex-wrap: wrap;
-      list-style: none;
-      padding: 0;
-      margin: 0;
     }
   }
   &__item {
-    @media (min-width: $screen-xl) {
-      line-height: 3rem;}
+    //@media (min-width: $screen-xs) {
+    line-height: 3rem;
+    //}
   }
-  &__item:not(:last-child){
-    margin-right: 44px;
+  &__item:not(:last-child) {
+    @media (min-width: $screen-md) {
+      margin-right: 44px;
+    }
   }
   &__link:visited {
     text-decoration: none;
@@ -37,5 +51,38 @@
     color: $gray;
     text-decoration: none;
     border: 0;
+  }
+  &__collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 23px;
+    height: 23px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    @include hidden-up(md);
+  }
+
+  &__collapse:focus {
+    outline: 0;
+  }
+  &__row {
+    display: block;
+
+    width: 23px;
+    height: 4px;
+
+    background-color: $color-red;
+  }
+
+  &__list--close-js {
+    display: none;
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
   }
 }

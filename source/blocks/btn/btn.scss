@@ -25,8 +25,12 @@
     @include btn-size(sm);
   }
   &--slider {
-    padding-right: 7.1rem;
-    padding-left: 7.1rem;
+    width: 100%;
+    @media (min-width: $screen-md) {
+      width: auto;
+      padding-right: 7.1rem;
+      padding-left: 7.1rem;
+    }
   }
   &--web-cite {
     padding: .9rem 4rem;
