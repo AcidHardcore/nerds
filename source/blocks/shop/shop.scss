@@ -38,6 +38,7 @@
     }
   }
   &__left {
+    @include col(xs, 11, 11);
     @include col(md, 2.5, 11);
     @include col(xl, 3, 11);
   }
@@ -75,7 +76,7 @@
     background: #01a25e;
   }
   &__price-bottom {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     @media (min-width: $screen-xl) {
       flex-wrap: nowrap;
@@ -84,7 +85,6 @@
   &__price-bottom input {
     background: #f1f1f1;
     width: 70%;
-    //margin-left: 10px;
     border-radius: 5px;
     text-align: center;
     padding: 10px 0;
@@ -95,6 +95,7 @@
     display: inline-flex;
     justify-content: space-between;
     padding-left: 5px;
+    width: 100%;
   }
   &__price-bottom label:first-child {
     margin-bottom: 15px;
@@ -145,6 +146,7 @@
     display: none;
   }
   &__right {
+    @include col(xs, 11, 11);
     @include col(md, 8, 11, 0);
     @include col(xl, 7, 11, 0);
     @include col-offset(md, 0.5);
@@ -154,6 +156,7 @@
   }
   &__wrapper-sort {
     @include col(xs, 11, 11, 0);
+    @include hidden-down(sm);
     margin-bottom: 20px;
     font-size: 1.2rem;
     line-height: 1.5;
@@ -194,6 +197,7 @@
     justify-content: center;
   }
   &__item {
+    @include col(xs, 11, 11);
     @include col(md, 4.5, 11, 0);
     @include col(xl, 4.5, 11, 0);
     position: relative;
@@ -219,9 +223,11 @@
     padding-left: 5px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    @media (min-width: $screen-xl) {
-      width: 240px;
-    }
+    //@media (min-width: $screen-md) {
+    //  width: 100%;
+    //}@media (min-width: $screen-xl) {
+    //  width: 240px;
+    //}
   }
   &__caption-circle {
     margin: 10px 0;
@@ -230,6 +236,9 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
+  }
+  &__img {
+    width: 100%;
   }
   &__tag {
     position: absolute;
@@ -262,11 +271,12 @@
     margin: 0;
   }
   &__paginator {
+    @include col(xs, 11, 11);
     @include col(md, 5, 11, 0);
     @include col(xl, 4, 11, 0);
     @include col-offset(md, 3);
     @include col-offset(xl, 4);
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-xs) {
       display: flex;
       justify-content: space-between;
     }

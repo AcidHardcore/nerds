@@ -30,22 +30,22 @@
 }
 
 @mixin hidden-down($screen: xs) {
-  @if ($screen = xs) {
+  @if ($screen == xs) {
   @media (max-width: ($screen-sm - 1)) { display: none; }
 }
-  @if ($screen = sm) {
+  @if ($screen == sm) {
   @media (max-width: ($screen-md - 1)) { display: none; }
 }
-  @if ($screen = md) {
+  @if ($screen == md) {
   @media (max-width: ($screen-lg - 1)) { display: none; }
 }
-  @if ($screen = lg) {
+  @if ($screen == lg) {
   @media (max-width: ($screen-xl - 1)) { display: none; }
 }
-  @if ($screen = xl) {
+  @if ($screen == xl) {
   @media (max-width: ($screen-xxl - 1)) { display: none; }
 }
-  @if ($screen = xxl) {
+  @if ($screen == xxl) {
   @media (max-width: ($screen-xxl - 1)) { display: none; }
 }
 }
