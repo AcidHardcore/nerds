@@ -110,6 +110,11 @@ gulp.task('svgstore', function () {
         .pipe(svgstore({inlineSvg: true}))
         .pipe(cheerio(function ($) {
             $('svg').attr('style', 'display:none');
+
+            //$('[fill]').removeAttr('fill');       //three strings need to test
+            //$('[stroke]').removeAttr('stroke');
+            //$('[style]').removeAttr('style');
+
         }))
         .pipe(rename('sprite-svg--ls.svg'))
         .pipe(gulp.dest('./build/img/'))
@@ -154,6 +159,7 @@ gulp.task('svgfallback', function () {
 //         .pipe(gulp.dest('./build/'))
 //         .pipe(debug({title: "html:"}));
 // });
+
 //Assembly html files
 gulp.task('html', function() {
     console.log('---------- Assembly html files');
