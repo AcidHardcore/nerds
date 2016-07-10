@@ -8,6 +8,7 @@
   //position: relative;
   &__container {
     @include container();
+    max-width:1200px;
   }
   &__wrapper {
     @include row(0);

@@ -5,6 +5,7 @@
   overflow: hidden;
   &__container {
     @include container();
+    max-width:1200px;
   }
   &__wrapper {
     @include row();
